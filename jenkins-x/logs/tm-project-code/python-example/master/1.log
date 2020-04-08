@@ -1,0 +1,33 @@
+
+Showing logs for build [32mtm-project-code-python-example-4vzdn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-8tg7v[0m
+{"level":"warn","ts":1586344464.4461608,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586344464.4465244,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mtm-project-code-python-example-4vzdn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-m5qxx[0m
+{"level":"warn","ts":1586344465.377096,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1586344465.3783183,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mtm-project-code-python-example-4vzdn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mtm-project-code-python-example-4vzdn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-tm-project-code-python-example-4vzdn-nbqdt[0m
+{"level":"warn","ts":1586344473.4581134,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586344474.7396965,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/tm-project-code/python-example.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mtm-project-code-python-example-4vzdn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:3395afbce4e110e3a23e768f1c3b7f0f970ad68b
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mtm-project-code-python-example-4vzdn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mtm-project-code-python-example-4vzdn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mtm-project-code-python-example-4vzdn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+error checking push permissions -- make sure you entered the correct tag name, and that you are authenticated correctly, and try again: checking push permission for "10.0.58.187:5000/tm-project-code/python-example:0.0.1": creating push check transport for 10.0.58.187:5000 failed: Get "http://10.0.58.187:5000/v2/": dial tcp 10.0.58.187:5000: i/o timeout
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
